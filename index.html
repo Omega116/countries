@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Asynchronous JavaScript</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Where in the world?</div>
+      <button class="btn-change-mode">
+        <p>Dark</p>
+        <i class="bx bxs-moon"></i>
+      </button>
+    </header>
+    <main class="container">
+      <div class="filter-box">
+        <div class="input-box">
+          <label for="searched-item">
+            <i class="bx bx-search"></i>
+          </label>
+          <input
+            id="searched-item"
+            type="text"
+            placeholder="Search for a country..."
+          />
+        </div>
+        <div class="region-box">
+          <select name="region" id="region">
+            <option value="Filter by Region">
+              Filter by Region<i class="bx bx-chevron-down"></i>
+            </option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+      </div>
+      <div class="countries"></div>
+      <div class="images"></div>
+    </main>
+  </body>
+</html>
