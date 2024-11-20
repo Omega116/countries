@@ -29,6 +29,11 @@ const getCurrency = function (data) {
   let cur = Object.values(data);
   return cur[0].name;
 };
+
+const getNativeName = function (data) {
+  let name = Object.values(data);
+  return name[0].common;
+};
 /* 
 async function neighbourHTML(border) {
   const country = await getJSON(
@@ -77,16 +82,19 @@ const buildHtml = async function (borders) {
 
 const renderCountry = async function (data) {
   const country = data[0];
+  console.log(country);
   let text = await buildHtml(country.borders);
   const html = `
   <div class="country-flag-box">
   <img class='country-flag' src='${country.flags.svg}' >
   </div>
-      <div class="contury-info-box">
+      <div class="country-info-box">
         <h2 class="country-name">${country.name.common}</h2>
         <div class="content">
           <p class="country-info">
-            Native name: <span class="response">${country.name.common}</span>
+            Native name: <span class="response">${getNativeName(
+              country.name.nativeName
+            )}</span>
           </p>
           <p class="country-info">
             Top Level Domains: <span class="response">${renderArray(

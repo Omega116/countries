@@ -47,7 +47,12 @@ body {
   height: 10rem;
   background-color: var(--header);
   box-shadow: 0 2px 4px 1px var(--shadow);
-  padding: 0 20rem;
+}
+
+.center {
+  width: 132rem;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,15 +80,19 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   background: var(--bg-color);
+  min-height: calc(100svh - 10rem);
+  width: 100%;
 }
 
 .filter-box {
-  width: 150rem;
+  width: 132rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 6rem auto 0 auto;
+  padding: 0;
 }
 
 .input-box {
@@ -91,7 +100,7 @@ body {
   background-color: var(--header);
   box-shadow: 0 0 4px 1px var(--shadow);
   border-radius: 5px;
-  width: 50rem;
+  width: 50%;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -124,13 +133,15 @@ input {
 }
 
 .countries {
-  margin: 4rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   font-size: 2rem;
   opacity: 0;
   transition: 1s;
   gap: 4rem;
+
+  flex-wrap: wrap;
+  width: 132rem;
+  margin: 4rem auto;
 }
 
 .country {
@@ -139,7 +150,7 @@ input {
   font-size: 1.8rem;
   width: 30rem;
   border-radius: 0.7rem;
-  margin: 0 3rem;
+
   /* overflow: hidden; */
   transition: 0.3s;
 }
@@ -208,4 +219,82 @@ input {
   margin: 2rem;
   border: 3rem solid white;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1649px) {
+  .filter-box {
+    width: 98rem;
+  }
+  .center {
+    width: 98rem;
+  }
+  .countries {
+    width: 98rem;
+  }
+}
+
+@media (max-width: 1224px) {
+  .filter-box {
+    width: 64rem;
+  }
+  .center {
+    width: 64rem;
+  }
+  .countries {
+    width: 64rem;
+  }
+}
+
+@media (max-width: 799px) {
+  html {
+    font-size: 50%;
+  }
+  .countries {
+    gap: 1rem;
+    width: 61rem;
+  }
+  .filter-box {
+    width: 61rem;
+  }
+  .center {
+    width: 61rem;
+  }
+}
+
+@media (max-width: 609px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 548px) {
+  html {
+    font-size: 50%;
+  }
+  .filter-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 5rem;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+  .countries {
+    gap: 2.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .header {
+    padding: 2rem;
+  }
+
+  .center {
+    width: 100%;
+  }
+  .logo {
+    font-size: 1.8rem;
+  }
 }
