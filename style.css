@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  text-decoration: none;
+}
+a {
+  color: var(--text-color);
 }
 
 :root {
@@ -17,6 +21,10 @@
   --bg-color: hsl(207, 26%, 17%);
   --text-color: #ffffff;
   --grey: #6a6a6a;
+}
+
+.hidden {
+  display: none;
 }
 .darkmode * {
   color: var(--text-color);
@@ -53,7 +61,7 @@ body {
   letter-spacing: 0.2rem;
 }
 
-button {
+.btn-change-mode {
   background: none;
   border: none;
   display: flex;
@@ -75,7 +83,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 6rem auto;
+  margin: 6rem auto 0 auto;
 }
 
 .input-box {
@@ -103,7 +111,7 @@ input {
   width: 100%;
 }
 
-#region {
+#category-filter {
   font-size: 1.8rem;
   height: 6.2rem;
   width: 20rem;
@@ -116,7 +124,7 @@ input {
 }
 
 .countries {
-  margin: 0 auto;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   font-size: 2rem;
@@ -133,11 +141,16 @@ input {
   border-radius: 0.7rem;
   margin: 0 3rem;
   /* overflow: hidden; */
+  transition: 0.3s;
+}
+
+.country:hover {
+  transform: scale(1.1);
 }
 
 .country__img {
   width: 30rem;
-  height: 17rem;
+  height: 22rem;
   object-fit: cover;
   background-color: #eee;
   border-top-left-radius: 0.7rem;
@@ -149,8 +162,8 @@ input {
 }
 
 .country__name {
-  font-size: 2.7rem;
-  margin-bottom: 0.7rem;
+  font-size: 2rem;
+  margin-bottom: 1.7rem;
 }
 
 .country__region {
@@ -167,7 +180,7 @@ input {
 .country__row span {
   display: inline-block;
   margin-right: 2rem;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
 }
 
 .btn-country {

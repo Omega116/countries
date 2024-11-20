@@ -27,13 +27,13 @@
             <i class="bx bx-search"></i>
           </label>
           <input
-            id="searched-item"
+            id="search-bar"
             type="text"
             placeholder="Search for a country..."
           />
         </div>
         <div class="region-box">
-          <select name="region" id="region">
+          <select name="region" id="category-filter">
             <option value="Filter by Region">
               Filter by Region<i class="bx bx-chevron-down"></i>
             </option>
@@ -42,11 +42,21 @@
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
+            <option value="Antarctic">Antarctic</option>
           </select>
         </div>
       </div>
       <div class="countries"></div>
       <div class="images"></div>
     </main>
+    <script>
+      const body = document.querySelector("body");
+      window.addEventListener("click", function (e) {
+        const btn = e.target.closest(".btn-change-mode");
+        if (btn) {
+          body.classList.toggle("darkmode");
+        }
+      });
+    </script>
   </body>
 </html>
