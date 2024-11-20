@@ -50,7 +50,7 @@ body {
 }
 
 .center {
-  width: 132rem;
+  width: 150rem;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -87,7 +87,7 @@ body {
 }
 
 .filter-box {
-  width: 132rem;
+  width: 150rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,10 +137,10 @@ input {
   font-size: 2rem;
   opacity: 0;
   transition: 1s;
-  gap: 4rem;
+  gap: 10rem;
 
   flex-wrap: wrap;
-  width: 132rem;
+  width: 150rem;
   margin: 4rem auto;
 }
 
